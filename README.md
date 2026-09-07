@@ -22,8 +22,6 @@ Freyja is being built as **two independent implementations of the same engine**,
 | 🗡️ | `main` | [Odin](https://odin-lang.org/) | **Vulkan** | Primary engine — explicit, low-level, no hidden driver magic |
 | 🛡️ | `opengl` *(own master)* | C++ | **OpenGL** | Reference / contribution backend — fast to prototype, easy to onboard into |
 
-> The Vulkan side is where the real engine work happens. The OpenGL branch exists as a simpler counterpart for testing ideas and sanity-checking rendering results before the same approach gets ported over to Vulkan — and as a friendlier entry point for anyone contributing who doesn't want to wade through Vulkan boilerplate on day one.
-
 ---
 
 ## ✦ Branches
