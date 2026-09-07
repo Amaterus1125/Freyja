@@ -2,7 +2,7 @@
 
 # ✦ Freyja ✦
 
-**A dual-backend graphics engine — one core, two GPU philosophies.**
+**A dual-backend graphics engine with one core, two GPU philosophies.**
 
 [![Odin](https://img.shields.io/badge/Odin-Vulkan-3ba3ec?style=for-the-badge)](https://odin-lang.org/)
 [![C++](https://img.shields.io/badge/C%2B%2B-OpenGL-00599C?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
