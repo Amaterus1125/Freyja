@@ -1,68 +1,109 @@
-# Freyja
+<div align="center">
 
-A dual-backend graphics engine, developed in parallel across two languages and two APIs as a way to learn both stacks side by side.
+# ✦ Freyja ✦
 
-> **Status:** 🚧 Actively in development. APIs, structure, and features are all subject to change.
+**A dual-backend graphics engine — one core, two GPU philosophies.**
 
-## Overview
+[![Odin](https://img.shields.io/badge/Odin-Vulkan-3ba3ec?style=for-the-badge)](https://odin-lang.org/)
+[![C++](https://img.shields.io/badge/C%2B%2B-OpenGL-00599C?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
+[![Status](https://img.shields.io/badge/status-in%20development-orange?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/license-TBD-lightgrey?style=for-the-badge)]()
 
-Freyja is being built as two independent implementations of the same engine:
+</div>
 
-| Implementation | Language | Graphics API | Role |
-|---|---|---|---|
-| `freyja-vk` | [Odin](https://odin-lang.org/) | Vulkan | Primary / low-level backend |
-| `freyja-gl` | C++ | OpenGL | Reference / contribution backend |
+---
 
-The idea: the Vulkan side in Odin is where the "real" engine work happens — explicit control over the GPU, no hidden driver magic. The OpenGL side in C++ exists as a simpler, faster-to-prototype counterpart for testing ideas, onboarding contributors, and sanity-checking rendering results against a much less error-prone API before porting the approach over to Vulkan.
+## ✦ What is Freyja?
 
-## Repository Layout
+Freyja is being built as **two independent implementations of the same engine**, developed in parallel so each one keeps the other honest:
 
-```
-freyja/
-├── freyja-vk/        # Odin + Vulkan implementation
-│   ├── main.odin
-│   └── ...
-├── freyja-gl/         # C++ + OpenGL implementation
-│   ├── main.cpp
-│   ├── CMakeLists.txt
-│   └── ...
-└── README.md
-```
+| | Branch | Language | API | Role |
+|---|---|---|---|---|
+| 🗡️ | `main` | [Odin](https://odin-lang.org/) | **Vulkan** | Primary engine — explicit, low-level, no hidden driver magic |
+| 🛡️ | `opengl` *(own master)* | C++ | **OpenGL** | Reference / contribution backend — fast to prototype, easy to onboard into |
 
-*(Layout will grow as the project does — this reflects the current early structure.)*
+> The Vulkan side is where the real engine work happens. The OpenGL branch exists as a simpler counterpart for testing ideas and sanity-checking rendering results before the same approach gets ported over to Vulkan — and as a friendlier entry point for anyone contributing who doesn't want to wade through Vulkan boilerplate on day one.
 
-## Building
+---
 
-### freyja-vk (Odin / Vulkan)
-Requires the [Odin compiler](https://odin-lang.org/docs/install/) and the [Vulkan SDK](https://vulkan.lunarg.com/sdk/home).
+## ✦ Branches
+
+Freyja is split across branches rather than folders — each backend is developed as its own line of history:
 
 ```
-cd freyja-vk
+main     → Odin + Vulkan   (primary engine)
+opengl   → C++ + OpenGL    (independent master branch, its own history/releases)
+```
+
+Clone and check out whichever backend you're working on:
+
+```bash
+git clone https://github.com/<you>/freyja.git
+
+# Odin / Vulkan (default)
+cd freyja
+
+# C++ / OpenGL
+git checkout opengl
+```
+
+---
+
+## ✦ Building
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🗡️ `main` — Odin / Vulkan
+
+Requires:
+- [Odin compiler](https://odin-lang.org/docs/install/)
+- [Vulkan SDK](https://vulkan.lunarg.com/sdk/home)
+
+```bash
 odin run .
 ```
 
-### freyja-gl (C++ / OpenGL)
-Requires CMake and a C++17 compiler. GLFW is fetched automatically; GLAD must be generated once (see `freyja-gl/README.md` for the one-time setup step).
+</td>
+<td width="50%" valign="top">
 
-```
-cd freyja-gl
+### 🛡️ `opengl` — C++ / OpenGL
+
+Requires:
+- CMake + a C++17 compiler
+- GLAD generated once (see branch README)
+
+```bash
 cmake -B build
 cmake --build build
 ```
 
-## Roadmap
+</td>
+</tr>
+</table>
+
+---
+
+## ✦ Roadmap
 
 - [ ] Core windowing + swapchain/context setup (both backends)
 - [ ] Basic triangle rendering (both backends)
-- [ ] Shared math/scene layer
+- [ ] Shared math / scene layer
 - [ ] Model loading
 - [ ] Lighting
-- [ ] Feature parity checkpoint between backends
+- [ ] Feature-parity checkpoint between backends
 
-## Why two backends?
+---
 
-Vulkan is explicit and verbose by design — great for learning what a GPU actually does, but slow to iterate with. OpenGL trades that control for speed of iteration. Building both side by side keeps the Vulkan backend honest (compare output against a known-simple reference) while keeping iteration fast enough to actually experiment.
+## ✦ Why two backends?
 
-## License
+Vulkan is explicit and verbose by design — excellent for learning exactly what the GPU is doing, but slow to iterate with. OpenGL trades that control for speed. Building both side by side keeps the Vulkan engine honest against a known-simple reference, while keeping iteration fast enough to actually experiment with ideas before committing them to the "real" backend.
 
-TBD.
+---
+
+<div align="center">
+
+**License:** TBD &nbsp;•&nbsp; **Status:** actively in development, expect breaking changes
+
+</div>
