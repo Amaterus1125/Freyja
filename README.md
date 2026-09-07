@@ -102,6 +102,6 @@ Vulkan is explicit and verbose by design — excellent for learning exactly what
 
 <div align="center">
 
-**License:** TBD &nbsp;•&nbsp; **Status:** actively in development, expect breaking changes
+**License:** MIT &nbsp;•&nbsp; **Status:** actively in development, expect breaking changes
 
 </div>
