@@ -13,7 +13,7 @@
 
 <img src="https://imgs.search.brave.com/ugsQPwm10SNoXcVh75a42R-cvQz1AcJMKH7h070SP2E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzU2/YzEzY2MwMDQ0MjYy/N2EwODYzMjk4OS83/ZjQzM2FjNi04OTM4/LTQ4NGUtYjIwNi02/YTlhNWJkZWM4Y2Mv/RnJleWphU29yY2Vy/ZXNzLnBuZw" alt="Freyja banner" width="800">
 
-<sub>*(replace `assets/banner.png` with your actual logo/banner image)*</sub>
+
 
 </div>
 
