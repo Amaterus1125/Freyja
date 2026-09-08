@@ -4,7 +4,7 @@
 
 **A dual-backend graphics engine with one core, two GPU philosophies.**
 
-[![Odin](https://img.shields.io/badge/Odin-Vulkan-3ba3ec?style=for-the-badge)](https://odin-lang.org/)
+[![Odin](https://stock.adobe.com/search?k=freyja)
 [![C++](https://img.shields.io/badge/C%2B%2B-OpenGL-00599C?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
 [![Status](https://img.shields.io/badge/status-in%20development-orange?style=for-the-badge)]()
 [![License](https://img.shields.io/badge/license-TBD-lightgrey?style=for-the-badge)]()
