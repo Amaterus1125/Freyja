@@ -38,13 +38,13 @@ Freyja is split across branches rather than folders — each backend is develope
 
 ```
 main     → Odin + Vulkan   (primary engine)
-opengl   → C++ + OpenGL    (independent master branch, its own history/releases)
+Cpp   → C++ + OpenGL    (independent master branch, its own history/releases)
 ```
 
 Clone and check out whichever backend you're working on:
 
 ```bash
-git clone https://github.com/<you>/freyja.git
+git clone https://github.com/Amaterus1125/freyja.git
 
 # Odin / Vulkan (default)
 cd freyja
@@ -74,7 +74,7 @@ odin run .
 </td>
 <td width="50%" valign="top">
 
-### 🛡️ `opengl` — C++ / OpenGL
+### 🛡️ `Cpp` — C++ / OpenGL
 
 Requires:
 - CMake + a C++17 compiler
