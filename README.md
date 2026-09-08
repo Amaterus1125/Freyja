@@ -4,10 +4,16 @@
 
 **A dual-backend graphics engine with one core, two GPU philosophies.**
 
-[![Odin](https://imgs.search.brave.com/tNafOGwFp9ZEElZLF8iD_m9EpbhWzTXtOn5quK9nrVY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3Lzk0LzgyLzE2/LzM2MF9GXzc5NDgy/MTYwNV9JRXVRODVN/SjE1U1YyM0xVQWFn/VkM5QlpMbUFEN0Vi/US5qcGc)
+[![Odin](https://img.shields.io/badge/Odin-Vulkan-3ba3ec?style=for-the-badge)](https://odin-lang.org/)
 [![C++](https://img.shields.io/badge/C%2B%2B-OpenGL-00599C?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
 [![Status](https://img.shields.io/badge/status-in%20development-orange?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/license-TBD-lightgrey?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)]()
+
+<br>
+
+<img src="https://imgs.search.brave.com/ugsQPwm10SNoXcVh75a42R-cvQz1AcJMKH7h070SP2E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzU2/YzEzY2MwMDQ0MjYy/N2EwODYzMjk4OS83/ZjQzM2FjNi04OTM4/LTQ4NGUtYjIwNi02/YTlhNWJkZWM4Y2Mv/RnJleWphU29yY2Vy/ZXNzLnBuZw" alt="Freyja banner" width="800">
+
+<sub>*(replace `assets/banner.png` with your actual logo/banner image)*</sub>
 
 </div>
 
@@ -21,6 +27,8 @@ Freyja is being built as **two independent implementations of the same engine**,
 |---|---|---|---|---|
 | 🗡️ | `main` | [Odin](https://odin-lang.org/) | **Vulkan** | Primary engine — explicit, low-level, no hidden driver magic |
 | 🛡️ | `opengl` *(own master)* | C++ | **OpenGL** | Reference / contribution backend — fast to prototype, easy to onboard into |
+
+> The Vulkan side is where the real engine work happens. The OpenGL branch exists as a simpler counterpart for testing ideas and sanity-checking rendering results before the same approach gets ported over to Vulkan — and as a friendlier entry point for anyone contributing who doesn't want to wade through Vulkan boilerplate on day one.
 
 ---
 
@@ -102,6 +110,6 @@ Vulkan is explicit and verbose by design — excellent for learning exactly what
 
 <div align="center">
 
-**License:** MIT &nbsp;•&nbsp; **Status:** actively in development, expect breaking changes
+**License:** [MIT](LICENSE) &nbsp;•&nbsp; **Status:** actively in development, expect breaking changes
 
 </div>
