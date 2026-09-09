@@ -11,7 +11,7 @@
 
 <br>
 
-<img src="https://imgs.search.brave.com/ugsQPwm10SNoXcVh75a42R-cvQz1AcJMKH7h070SP2E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzU2/YzEzY2MwMDQ0MjYy/N2EwODYzMjk4OS83/ZjQzM2FjNi04OTM4/LTQ4NGUtYjIwNi02/YTlhNWJkZWM4Y2Mv/RnJleWphU29yY2Vy/ZXNzLnBuZw" alt="Freyja banner" width="400">
+<img src="https://imgs.search.brave.com/CSi1h98kPP4oCKilbZRp4hQGq9qcRswu43Uvei6414E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Z2V0cGZwcy5jb20v/aW1nL21vYmlsZS9t/aW5pbWFsaXN0LXBm/cHMvZ2VvbWV0cmlj/LXNoYXBlcy9jcnlz/dGFsLWNsZWFyLXdh/dGVyLXNwbGFzaC1n/ZW9tZXRyaWMtcGl4/ZWwtYXJ0LW1vYmls/ZS0xenZobzItNTU1/NTU4OTQud2VicA" alt="Freyja banner" width="400">
 
 
 
