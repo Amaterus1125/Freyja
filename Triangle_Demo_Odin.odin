@@ -1,3 +1,7 @@
+// for odin to work on your pc with vulkan and opengl, downoad vulkan first , then git and then clone the odin repo , after that add it to env paths and use it in vs code 
+
+
+
 package main
 
 import "core:fmt"
