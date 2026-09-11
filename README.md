@@ -39,21 +39,21 @@ Each backend lives in its own repository:
 **Odin + Vulkan** — primary engine
 
 ```bash
-git clone https://github.com/Amaterus1125/freyja.git
+git clone https://github.com/Amaterus1125/Freyja.git
 ```
 
 ### 🪶 [freyja-odin-gl](https://github.com/Amaterus1125/freyja-odin-gl)
 **Odin + OpenGL** — reference backend
 
 ```bash
-git clone https://github.com/Amaterus1125/freyja-odin-gl.git
+git clone https://github.com/Amaterus1125/Freyja-odin-opengl.git
 ```
 
 ### 🛡️ [freyja-cpp-opengl](https://github.com/Amaterus1125/freyja-cpp-opengl)
 **C++ + OpenGL** — contribution backend
 
 ```bash
-git clone https://github.com/Amaterus1125/freyja-cpp-opengl.git
+git clone https://github.com/Shobhit-bit/Freyja-cpp.git
 ```
 
 > Each repo also keeps its own branches for in-progress work and history (`main`, feature branches, etc.) — splitting into separate repos changes *where* each backend lives, not how branching works within it.
