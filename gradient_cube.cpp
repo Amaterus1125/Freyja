@@ -66,37 +66,15 @@ GLuint compileShader(GLenum type, const char* src) {
 
     int success;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        char infoLog[512];
-        glGetShaderInfoLog(shader, 512, nullptr, infoLog);
-        std::fprintf(stderr, "Shader compile error: %s\n", infoLog);
-    }
     return shader;
 }
-
-int main() {
-    if (!glfwInit()) {
-        std::fprintf(stderr, "Failed to init GLFW\n");
-        return -1;
-    }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "Cube", nullptr, nullptr);
-    if (!window) {
-        std::fprintf(stderr, "Failed to create window\n");
-        glfwTerminate();
-        return -1;
-    }
-
     glfwMakeContextCurrent(window);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::fprintf(stderr, "Failed to init GLAD\n");
-        return -1;
-    }
 
     glEnable(GL_DEPTH_TEST);
 
@@ -110,11 +88,6 @@ int main() {
 
     int success;
     glGetProgramiv(program, GL_LINK_STATUS, &success);
-    if (!success) {
-        char infoLog[512];
-        glGetProgramInfoLog(program, 512, nullptr, infoLog);
-        std::fprintf(stderr, "Shader link error: %s\n", infoLog);
-    }
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
@@ -133,31 +106,24 @@ int main() {
         int width, height;
         glfwGetFramebufferSize(window, &width, &height);
         glViewport(0, 0, width, height);
-
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
         glm::mat4 p = glm::perspective(glm::radians(60.0f), (float)width / (float)height, 0.1f, 100.0f);
         glm::mat4 m = glm::rotate(
             glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -3.5f)),
             (float)glfwGetTime(),
             glm::vec3(1.0f, 1.0f, 1.0f)
         );
-
         glUseProgram(program);
-
 
         PerFrameData perFrameData{ .mvp = p * m, .isWireframe = 0 };
         glNamedBufferSubData(perFrameDataBuf, 0, kBufferSize, &perFrameData);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         glDrawArrays(GL_TRIANGLES, 0, 36);
-
-
         perFrameData.isWireframe = 1;
         glNamedBufferSubData(perFrameDataBuf, 0, kBufferSize, &perFrameData);
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glDrawArrays(GL_TRIANGLES, 0, 36);
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
