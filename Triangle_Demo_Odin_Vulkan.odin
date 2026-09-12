@@ -1,6 +1,3 @@
-
-// Minimal Vulkan "Hello Triangle" in Odin.
-//
 // Same gradient triangle (red/green/blue corners, hardcoded in the vertex
 // shader) as the C++ Vulkan version -- this is a straight structural port:
 // instance -> device -> swapchain -> render pass -> pipeline -> draw loop.
