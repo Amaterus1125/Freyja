@@ -50,7 +50,7 @@ git clone https://github.com/Amaterus1125/Freyja-odin-opengl.git
 ```
 
 ### 🛡️ [freyja-cpp-opengl](https://github.com/Amaterus1125/freyja-cpp-opengl)
-**C++ + OpenGL** — contribution backend
+**C++ + OpenGL** — contribution backend API + The real Backend mechanics 
 
 ```bash
 git clone https://github.com/Shobhit-bit/Freyja-cpp.git
@@ -66,7 +66,7 @@ git clone https://github.com/Shobhit-bit/Freyja-cpp.git
 <tr>
 <td width="33%" valign="top">
 
-### 🗡️ freyja — Odin / Vulkan
+### 🗡️ Freyja — Odin / Vulkan
 
 Requires:
 - [Odin compiler](https://odin-lang.org/docs/install/)
@@ -79,7 +79,7 @@ odin run .
 </td>
 <td width="33%" valign="top">
 
-### 🪶 freyja-odin-gl — Odin / OpenGL
+### 🪶 Freyja-odin-gl — Odin / OpenGL
 
 Requires:
 - [Odin compiler](https://odin-lang.org/docs/install/)
@@ -92,7 +92,7 @@ odin run .
 </td>
 <td width="34%" valign="top">
 
-### 🛡️ freyja-cpp-opengl — C++ / OpenGL
+### 🛡️ Freyja-cpp-opengl — C++ / OpenGL
 
 Requires:
 - CMake + a C++17 compiler
